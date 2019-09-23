@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.98
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPOS", "SistemaPOS\SistemaPOS.csproj", "{FEC8A520-2C9E-47CE-B2CA-F02B574761E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaDLL", "LibreriaDLL\LibreriaDLL.csproj", "{773E89FC-5E40-4CC4-B90B-101851158674}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEC8A520-2C9E-47CE-B2CA-F02B574761E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC8A520-2C9E-47CE-B2CA-F02B574761E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC8A520-2C9E-47CE-B2CA-F02B574761E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC8A520-2C9E-47CE-B2CA-F02B574761E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773E89FC-5E40-4CC4-B90B-101851158674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773E89FC-5E40-4CC4-B90B-101851158674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773E89FC-5E40-4CC4-B90B-101851158674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773E89FC-5E40-4CC4-B90B-101851158674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
