@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lAdmin = new System.Windows.Forms.Label();
+            this.lAdminUser = new System.Windows.Forms.Label();
+            this.lAdminCodigo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(35, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 15);
@@ -69,8 +69,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(35, 72);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(77, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 2;
@@ -81,37 +81,37 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(35, 116);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(77, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Codigo:";
             // 
-            // label4
+            // lAdmin
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(204, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 4;
+            this.lAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdmin.Location = new System.Drawing.Point(204, 29);
+            this.lAdmin.Name = "lAdmin";
+            this.lAdmin.Size = new System.Drawing.Size(100, 20);
+            this.lAdmin.TabIndex = 4;
             // 
-            // label5
+            // lAdminUser
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(204, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
-            this.label5.TabIndex = 5;
+            this.lAdminUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdminUser.Location = new System.Drawing.Point(204, 72);
+            this.lAdminUser.Name = "lAdminUser";
+            this.lAdminUser.Size = new System.Drawing.Size(100, 20);
+            this.lAdminUser.TabIndex = 5;
             // 
-            // label6
+            // lAdminCodigo
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(204, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lAdminCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdminCodigo.Location = new System.Drawing.Point(204, 116);
+            this.lAdminCodigo.Name = "lAdminCodigo";
+            this.lAdminCodigo.Size = new System.Drawing.Size(100, 20);
+            this.lAdminCodigo.TabIndex = 6;
+            this.lAdminCodigo.Click += new System.EventHandler(this.label6_Click);
             // 
             // button1
             // 
@@ -175,18 +175,21 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lAdminCodigo);
+            this.Controls.Add(this.lAdminUser);
+            this.Controls.Add(this.lAdmin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(651, 386);
+            this.MinimumSize = new System.Drawing.Size(651, 386);
             this.Name = "Administrador";
             this.Text = "Administrador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrador_FormClosed);
+            this.Load += new System.EventHandler(this.Administrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,9 +202,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lAdmin;
+        private System.Windows.Forms.Label lAdminUser;
+        private System.Windows.Forms.Label lAdminCodigo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

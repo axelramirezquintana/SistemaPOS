@@ -33,9 +33,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lCodigo = new System.Windows.Forms.Label();
+            this.lUser = new System.Windows.Forms.Label();
+            this.lNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.button4.TabIndex = 22;
             this.button4.Text = "Cerrar sesion";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -83,29 +84,29 @@
             this.button1.Text = "Principal";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lCodigo
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(195, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 20);
-            this.label6.TabIndex = 18;
+            this.lCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lCodigo.Location = new System.Drawing.Point(195, 141);
+            this.lCodigo.Name = "lCodigo";
+            this.lCodigo.Size = new System.Drawing.Size(100, 20);
+            this.lCodigo.TabIndex = 18;
             // 
-            // label5
+            // lUser
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(195, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
-            this.label5.TabIndex = 17;
+            this.lUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lUser.Location = new System.Drawing.Point(195, 97);
+            this.lUser.Name = "lUser";
+            this.lUser.Size = new System.Drawing.Size(100, 20);
+            this.lUser.TabIndex = 17;
             // 
-            // label4
+            // lNombre
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(195, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 16;
+            this.lNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lNombre.Location = new System.Drawing.Point(195, 54);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(100, 20);
+            this.lNombre.TabIndex = 16;
             // 
             // label3
             // 
@@ -145,7 +146,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(447, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(389, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(149, 131);
             this.pictureBox1.TabIndex = 12;
@@ -162,18 +163,20 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lCodigo);
+            this.Controls.Add(this.lUser);
+            this.Controls.Add(this.lNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(638, 426);
+            this.MinimumSize = new System.Drawing.Size(638, 426);
             this.Name = "Usuario";
             this.Text = "Usuario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,9 +189,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lCodigo;
+        private System.Windows.Forms.Label lUser;
+        private System.Windows.Forms.Label lNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

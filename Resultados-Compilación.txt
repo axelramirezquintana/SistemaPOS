@@ -1,0 +1,3 @@
+﻿1>------ Operación Compilar iniciada: proyecto: SistemaPOS, configuración: Debug Any CPU ------
+1>  SistemaPOS -> C:\Users\axelr\Documents\Visual Studio 2017\Projects\SistemaPOS\SistemaPOS\bin\Debug\SistemaPOS.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========

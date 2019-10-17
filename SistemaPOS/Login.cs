@@ -20,19 +20,33 @@ namespace SistemaPOS
             InitializeComponent();
         }
 
+        public static string Codigo = "";
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                string validar = string.Format("Select * FROM Usuarios WHERE account='{0}'AND password ='{1}'",textUsuario.Text.Trim(),textPassword.Text.Trim());
+                string validar = string.Format("Select * FROM Usuarios WHERE account='{0}'AND password ='{1}'", textUsuario.Text.Trim(), textPassword.Text.Trim());
                 DataSet conectar = Biblioteca.Herramientas(validar);
 
+                Codigo = conectar.Tables[0].Rows[0]["id_usuario"].ToString().Trim();
                 string cuenta = conectar.Tables[0].Rows[0]["account"].ToString().Trim();
                 string contrasena = conectar.Tables[0].Rows[0]["password"].ToString().Trim();
 
                 if (cuenta == textUsuario.Text.Trim() && contrasena == textPassword.Text.Trim())
                 {
-                    MessageBox.Show("Inicio de sesion correcto");
+                    if (Convert.ToBoolean(conectar.Tables[0].Rows[0]["validar_admin"].ToString().Trim()) == true)
+                    {
+                        Administrador Admin = new Administrador();
+                        this.Hide();
+                        Admin.Show();
+                    }
+                    else
+                    {
+                        Usuario User = new Usuario();
+                        this.Hide();
+                        User.Show();
+                    }
                 }
                
             }
@@ -45,6 +59,11 @@ namespace SistemaPOS
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
     }

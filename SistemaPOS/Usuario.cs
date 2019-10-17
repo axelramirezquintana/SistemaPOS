@@ -16,5 +16,15 @@ namespace SistemaPOS
         {
             InitializeComponent();
         }
+
+        private void Usuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
